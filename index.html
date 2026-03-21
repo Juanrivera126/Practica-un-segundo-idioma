@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica con un segundo idioma</title>
+    <!-- Librería para el efecto de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="setup">
+            <h1>Practica con un segundo idioma</h1>
+            <div class="setup-controls">
+                <select id="mode-select">
+                    <option value="es-en">Español a Inglés</option>
+                    <option value="en-es">Inglés a Español</option>
+                </select>
+                
+                <select id="level-select">
+                    <option value="fácil">Nivel: Fácil</option>
+                    <option value="intermedio" selected>Nivel: Intermedio</option>
+                    <option value="difícil">Nivel: Difícil</option>
+                </select>
+
+                <select id="num-ejercicios-select">
+                    <option value="3">3 Ejercicios</option>
+                    <option value="5" selected>5 Ejercicios</option>
+                    <option value="10">10 Ejercicios</option>
+                    <option value="15">15 Ejercicios</option>
+                </select>
+                
+                <select id="text-model-select">
+                    <option value="gemini-search" selected>Gemini Search</option>
+                    <option value="kimi">Kimi</option>
+                    <option value="minimax">Minimax</option>
+                    <option value="openai">GPT 4o Mini</option>
+                </select>
+
+                <button id="start-btn">Comenzar</button>
+                <button id="change-theme-btn" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);">Cambiar panel de colores</button>
+            </div>
+        </div>
+
+        <div id="loader" style="display: none;"></div>
+
+        <div id="game-container">
+            <div class="evaluation-header">
+                <div class="progress-info">
+                    <span id="current-step"></span>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="header-buttons">
+                    <button id="download-header-btn" style="background: rgba(255,255,255,0.1); font-size: 0.8rem; padding: 8px 15px;">Descargar HTML</button>
+                    <button id="reset-btn" style="font-size: 0.8rem; padding: 8px 15px;">Reiniciar</button>
+                </div>
+            </div>
+            
+            <div id="exercise-board">
+                <div id="source-phrase"></div>
+                <div class="section-label">Organiza la traducción:</div>
+                <div id="slots-container"></div>
+                <div class="section-label">Palabras disponibles:</div>
+                <div id="options-container"></div>
+                <div class="action-buttons">
+                    <button id="verify-btn">Verificar</button>
+                    <button id="next-btn" style="display: none;">Siguiente</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container"></div>
+    </div>
+
+    <footer>
+        Diseñado por Juan Guillermo Rivera Berrío con tecnología Gemini 3 Flash, las API de Pollinations y asistencia de Antigravity de Google
+    </footer>
+
+    <!-- Lógica externa -->
+    <script src="script.js"></script>
+</body>
+</html>
