@@ -2,7 +2,7 @@
 
 Una aplicación web moderna, dinámica y educativa diseñada para practicar traducciones entre **Español e Inglés** utilizando inteligencia artificial de vanguardia.
 
-![Vista previa de la aplicación](https://raw.githubusercontent.com/JuanGuillermoRivera/Practica-Idioma-AI/main/screenshot.png) *(Nota: Reemplaza con una imagen real tras subir a GitHub)*
+[Vista previa de la aplicación](https://juanrivera126.github.io/Practica-un-segundo-idioma/)
 
 ## 🚀 Características Principales
 
